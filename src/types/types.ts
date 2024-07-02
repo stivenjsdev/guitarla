@@ -17,3 +17,5 @@ export type CartItem = Guitar & {
 // export type CartItem = Omit<Guitar, 'id' | 'name' | 'price'> & {
 //   quantity: number;
 // };
+
+// export type GuitarID = Pick<Guitar, 'id'>;
