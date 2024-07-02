@@ -1,4 +1,4 @@
-interface Guitar {
+export interface IGuitar {
   id: number;
   name: string;
   image: string;
@@ -6,7 +6,7 @@ interface Guitar {
   price: number;
 }
 
-export const db: Array<Guitar> = [
+export const db: Array<IGuitar> = [
   {
     id: 1,
     name: "Lukather",

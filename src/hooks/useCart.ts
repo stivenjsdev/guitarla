@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { db } from "../data/db";
+import { Guitar, db } from "../data/db";
 
 export const useCart = () => {
   const initialStorageCart = () => {
@@ -8,15 +8,15 @@ export const useCart = () => {
   };
 
   //State
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Array<Guitar>>(db);
   const [cart, setCart] = useState(initialStorageCart);
 
   const MAX_ITEMS = 10;
   const MIN_ITEMS = 1;
 
-  useEffect(() => {
-    setData(db);
-  }, []);
+  // useEffect(() => {
+  //   setData(db);
+  // }, []);
 
   useEffect(() => {
     // save to local storage

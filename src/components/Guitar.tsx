@@ -1,4 +1,11 @@
-const Guitar = ({ guitar, addToCart }) => {
+import { IGuitar } from "../data/db";
+
+type GuitarProps = {
+  guitar: IGuitar;
+  addToCart: (item: IGuitar) => void;
+};
+
+const Guitar = ({ guitar, addToCart }: GuitarProps) => {
 
   const { name, image, description, price } = guitar;
 
