@@ -1,12 +1,6 @@
-export interface IGuitar {
-  id: number;
-  name: string;
-  image: string;
-  description: string;
-  price: number;
-}
+import type { Guitar } from "../types/types";
 
-export const db: Array<IGuitar> = [
+export const db: Array<Guitar> = [
   {
     id: 1,
     name: "Lukather",
