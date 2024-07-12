@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import { initialState, reducer } from "./reducers/cartReducer";
 
 function App() {
-
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -16,10 +15,7 @@ function App() {
 
   return (
     <>
-      <Header
-        cart={state.cart}
-        dispatch={dispatch}
-      />
+      <Header cart={state.cart} dispatch={dispatch} />
 
       <main className="container-xl mt-5">
         <h2 className="text-center">Nuestra Colección</h2>
@@ -34,7 +30,7 @@ function App() {
       <footer className="bg-dark mt-5 py-5">
         <div className="container-xl">
           <p className="text-white text-center fs-4 mt-4 m-md-0">
-            GuitarLA - Todos los derechos Reservados
+            &copy; 2024 GuitarLA - Todos los derechos Reservados
           </p>
         </div>
       </footer>
